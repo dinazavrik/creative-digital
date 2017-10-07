@@ -1,0 +1,43 @@
+.txt-slider-icons{
+  background-color: $bg_color_1;
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+  }
+  &__inform{
+    @include flex-grid-column(12);
+    text-align: center;
+    padding-top: rem-calc(50);
+    padding-bottom: rem-calc(68);
+  }
+  &__image{
+    padding-bottom: rem-calc(34);
+  }
+  &__title{
+    color: $black-color;
+    font-size: rem-calc(36);
+    font-weight: 600;
+  }
+  &__slider{
+    @include flex-grid-column(12);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  &__slider-content{
+    @include flex-grid-column(6);
+    background-color: $white-color;
+  }
+  &__slider-title{
+    color: #9f9acf;
+    font-size: rem-calc(24);
+    font-weight: 700;
+  }
+  &__slider-sub-title{
+    color: $black-color;
+    font-size: rem-calc(24);
+  }
+}

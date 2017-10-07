@@ -1,0 +1,129 @@
+.footer{
+  background-color: $bg_color_1;
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+    justify-content: center;
+  }
+  &__inform{
+    @include flex-grid-column(12);
+    text-align: center;
+    position: absolute;
+    padding-top: rem-calc(56);
+  }
+  &__image{
+    padding-bottom: rem-calc(25);
+  }
+  &__title{
+    color: $white-color;
+    font-size: rem-calc(36);
+    font-weight: 600;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: absolute;
+    padding-top: rem-calc(300);
+  }
+  &__form-name{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: rem-calc(23);
+    @include breakpoint(xs){
+      display: block;
+    }
+  }
+  &__form-text{
+    width: rem-calc(414);
+    @include breakpoint(xs){
+      width: 100%;
+    }
+    &--width{
+      width: rem-calc(860);
+      height: 200px;
+      @include breakpoint(xs){
+        width: 100%;
+      }
+    }
+    &--right{
+      margin-right: rem-calc(32);
+    }
+  }
+  &__form-input{
+    width: 100%;
+    border: none;
+    color: $white-color;
+    font-family: $main-font-family;
+    font-size: rem-calc(18);
+    font-style: italic;
+    background-color: white;
+    padding: rem-calc(22);
+  }
+  &__form-input:focus{
+    outline-style: ridge;
+  }
+  &__form-textarea{
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: $white-color;
+    font-family: $main-font-family;
+    font-size: rem-calc(18);
+    font-style: italic;
+    background-color: white;
+    padding: rem-calc(22);
+  }
+  &__form-textarea:focus{
+    outline-style: ridge;
+  }
+  &__form-btn{
+    width: rem-calc(293);
+    background-color: #9f9acf;
+    color: $white-color;
+    font-family: $main-font-family;
+    font-size: rem-calc(20);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 28px 68px;
+    margin-top: rem-calc(55);
+    margin-bottom: rem-calc(54);
+  }
+  &__form-btn:hover{
+    color: $hover_color;
+  }
+  &__social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #9f9acf;
+    align-items: center;
+    justify-content: center;
+  }
+  &__home{
+    position: relative;
+    left: 45%;
+    margin-bottom: rem-calc(10);
+    width: rem-calc(84);
+    height: rem-calc(84);
+    background-color: #9f9acf;
+    @include breakpoint(xs){
+      left: 60%;
+      background-color: #5f5c82;
+    }
+  }
+  &__home-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#footer__map{
+  width: 100%;
+  height: 900px;
+  opacity: 0.5;
+}

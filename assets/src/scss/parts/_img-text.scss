@@ -1,0 +1,54 @@
+.img-text{
+  padding-top: rem-calc(124);
+  background-color: $bg_color_1;
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+  }
+  &__img{
+    width: rem-calc(380);
+    height: rem-calc(555);
+    @include bg-img('img/img-text.png');
+    @include flex-grid-column(4);
+    @include breakpoint(xs){
+      @include flex-grid-column(12);
+    }
+  }
+  &__img-info{
+    text-align: center;
+  }
+  &__image{
+    padding-top: rem-calc(76);
+    padding-bottom: rem-calc(44);
+  }
+  &__text{
+    @include flex-grid-column(7);
+    padding-left: rem-calc(120);
+    padding-top: rem-calc(76);
+    @include breakpoint(xs){
+      @include flex-grid-column(12);
+      padding-left: rem-calc(40);
+    }
+  }
+  &__text-t{
+    color: $black-color;
+    font-size: rem-calc(20);
+    font-weight: 400;
+  }
+  &__btn{
+    text-align: center;
+    margin-top: rem-calc(90);
+  }
+  &__button{
+    font-family: $main-font-family;
+    color: $black-color;
+    font-size: rem-calc(20);
+    font-style: italic;
+    text-decoration: none;
+    border: 1px solid #7d7a7c;
+    padding: 20px 52px;
+  }
+  &__button:hover{
+    color: #312f30;
+  }
+}

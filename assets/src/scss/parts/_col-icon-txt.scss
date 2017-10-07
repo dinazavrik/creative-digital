@@ -1,0 +1,61 @@
+.col-icon-txt{
+  padding-top: rem-calc(120);
+  background-color: $bg_color_1;
+  &__row{
+    @include flex-grid-column(12, 15);
+    @include flex-grid-row;
+  }
+  &__two-cols{
+    @include flex-grid-column(7);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include breakpoint(xs){
+      @include flex-grid-column(12);
+    }
+  }
+  &__img{
+    @include flex-grid-column(5);
+    @include bg-img('img/col-text-img.png');
+    width: rem-calc(410);
+    height: rem-calc(800);
+    position: relative;
+    @include breakpoint(xs){
+      @include flex-grid-column(12);
+    }
+  }
+  &__col{
+    @include flex-grid-column(6);
+    width: rem-calc(480);
+    height: rem-calc(400);
+    position: relative;
+    &--bg{
+      background-color: #dbdbdb;
+    }
+  }
+  &__col-wrap{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &--with{
+      top: 35%;
+    }
+  }
+  &__title{
+    color: $black-color;
+    font-size: 24px;
+    font-weight: 700;
+    &--bot{
+      margin-bottom: rem-calc(118);
+    }
+  }
+  &__sub-title{
+    color: $black-color;
+    font-size: 18px;
+  }
+  &__image{
+    margin-bottom: rem-calc(30);
+  }
+}
