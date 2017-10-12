@@ -1,5 +1,8 @@
 .footer{
   background-color: $bg_color_1;
+  @include breakpoint(xs){
+   padding-top: rem-calc(30);
+  }
   &__row{
     @include flex-grid-column(12, 15);
     @include flex-grid-row;
@@ -113,6 +116,9 @@
     align-items: center;
     justify-content: center;
   }
+  &__social-text{
+    margin-bottom: 0;
+  }
   &__home{
     position: relative;
     left: 55%;
@@ -121,7 +127,7 @@
     height: rem-calc(45);
     background-color: #9f9acf;
     @include breakpoint(xs){
-      left: 60%;
+      left: 0;
       background-color: #5f5c82;
     }
   }
@@ -135,5 +141,8 @@
 
 #footer__map{
   width: 100%;
-  height: 900px;
+  height: rem-calc(900);
+  @include breakpoint(xs){
+    height: rem-calc(400);
+  }
 }

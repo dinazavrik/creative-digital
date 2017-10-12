@@ -8,6 +8,9 @@
   margin-bottom: 0;
   list-style: none;
   background-color: #9f9acf;
+  @include breakpoint(xs){
+    display: none;
+  }
   &__item{
     margin-right: rem-calc(13);
     width: rem-calc(32);

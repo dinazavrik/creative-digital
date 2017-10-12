@@ -164,7 +164,11 @@ svg{
   list-style: none;
   @include breakpoint(xs){
     display: flex;
-    @include flex-grid-column(9);
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    @include flex-grid-column(10);
+    background-color: $white-color;
   }
   &--show{
     @include breakpoint(xs){
@@ -184,6 +188,9 @@ svg{
     text-decoration: none;
     text-transform: uppercase;
     transition: all .3s ease;
+    @include breakpoint(xs){
+      color: $black-color;
+    }
   }
   &__link:hover{
     color: $hover_color;
