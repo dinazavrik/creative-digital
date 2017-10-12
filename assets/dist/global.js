@@ -16,9 +16,16 @@
             }
         });
 
+        $(document).foundation();
+
+        $('.menu-icon').on('click', function () {
+            $(this).toggleClass('menu-icon--open');
+            $('.menu').toggleClass('menu--show');
+        });
+
         $('.txt-slide-img__slider').slick({
             dots: true,
-            infinite: true,
+            infinite: true
         });
 
         $('.txt-slider-icons__slider').slick({

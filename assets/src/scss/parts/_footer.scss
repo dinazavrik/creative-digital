@@ -10,6 +10,9 @@
     text-align: center;
     position: absolute;
     padding-top: rem-calc(56);
+    @include breakpoint(xs){
+      position: relative;
+    }
   }
   &__image{
     padding-bottom: rem-calc(25);
@@ -18,6 +21,9 @@
     color: $white-color;
     font-size: rem-calc(36);
     font-weight: 600;
+    @include breakpoint(xs){
+      color: $black-color;
+    }
   }
   &__form{
     display: flex;
@@ -26,6 +32,10 @@
     align-items: center;
     position: absolute;
     padding-top: rem-calc(300);
+    @include breakpoint(xs){
+      position: relative;
+      padding-top: rem-calc(20);
+    }
   }
   &__form-name{
     display: flex;
@@ -93,6 +103,7 @@
   }
   &__form-btn:hover{
     color: $hover_color;
+    cursor: pointer;
   }
   &__social{
     display: flex;
@@ -104,10 +115,10 @@
   }
   &__home{
     position: relative;
-    left: 45%;
+    left: 55%;
     margin-bottom: rem-calc(10);
-    width: rem-calc(84);
-    height: rem-calc(84);
+    width: rem-calc(45);
+    height: rem-calc(45);
     background-color: #9f9acf;
     @include breakpoint(xs){
       left: 60%;
@@ -125,5 +136,4 @@
 #footer__map{
   width: 100%;
   height: 900px;
-  opacity: 0.5;
 }

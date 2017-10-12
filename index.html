@@ -19,18 +19,44 @@
   <div class="header__row">
 
     <div class="header__logo">
-      <a href="#"><img src="assets/dist/img/logo.png" alt="logo"></a>
+
+      <!--?xml version="1.0" encoding="utf-8"?-->
+
+      <svg version="1.1" id="loup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="670px" height="770px" viewBox="0 0 670 770" enable-background="new 0 0 670 770" xml:space="preserve">
+
+<path id="contour" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+    M144.594,374.023l-77.605,72.698l-50.998,37.498l106.495,92.995l74.996,100.495l88.496,12l152.992,72.95l94.495-158.446
+    l-14.999-43.498l46.498-139.493l-7.5-88.496l61.497-80.996c0,0,24.957-16.933,34.498-28.498s6.935-26.598,6.935-26.598
+    l-18.934-36.399l-37.498,23.999l-23.999-13.499l8.999-73.497l-35.998-73.496l-26.801-12.045l-33.097,25.521l-70.546,91.507
+    l-60.022,13.505L199.751,287.726L103,320.727v38.907l125.04,43.589l80.188-39.563"></path>
+
+<path id="bouche" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+    M574.381,67.467l-16.5,13.417l-5.189,55.375L535,164.134c0,0-4.667,21.467,0,27.5s26.691,5,26.691,5l42.176-12.4"></path>
+<path id="dent" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+    M599.714,179.468c0,0,0.543-20.533,4.248-22.167s12.629,18.85,12.629,18.85"></path>
+<path id="oeil" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+    M371.631,189.134l6.248-15.264c0,0,8.882-4.935,13.335-2.569s7-8.834,7-8.834l9.167-1"></path>
+<polygon id="nez" fill="none" points="552.965,23.742 526.162,11.697 499.087,32.576 519.262,42.931 537.25,45.087 559.033,36.133 "></polygon>
+<path id="machoire" fill="none" stroke="#000000" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+    M535.381,215.733c0,0,7.216,39.393,7.084,45.997s-49.497,54.098-49.497,54.098l4.5,44.897l-22.299,60.198l-19.788,14.711l-28,17
+    l-97-41l-40-87l7-39"></path>
+</svg>
+
     </div>
 
     <nav class="header__navigation">
 
-      <ul class="menu">
+      <ul class="menu menu--show">
         <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
         <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
         <li class="menu__item"><a class="menu__link" href="#serv">Services</a></li>
         <li class="menu__item"><a class="menu__link" href="#work">Works</a></li>
         <li class="menu__item"><a class="menu__link" href="#cont">Contact</a></li>
       </ul>
+
+      <div class="menu-icon">
+        <span class="menu-icon__line"></span>
+      </div>
 
     </nav>
 
@@ -353,7 +379,87 @@
         var uluru = {lat: 46.57479, lng: 30.8021004};
         var map = new google.maps.Map(document.getElementById('footer__map'), {
             zoom: 17,
-            center: uluru
+            center: uluru,
+            styles: [
+                {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+                {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{color: '#263c3f'}]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#6b9a76'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{color: '#38414e'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#212a37'}]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#9ca5b3'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{color: '#746855'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{color: '#1f2835'}]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#f3d19c'}]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{color: '#2f3948'}]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#d59563'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{color: '#17263c'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{color: '#515c6d'}]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{color: '#17263c'}]
+                }
+            ]
         });
         var marker = new google.maps.Marker({
             position: uluru,
@@ -367,7 +473,8 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="assets/components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="assets/plugins/slick-1.8.0/slick/slick.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?AIzaSyC5n6w319FmByI--y_Tyk52SeAOIPRp6qM&callback=initMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAD46cVaDZP-B0rVwH09fkGxATl9jgzkQQ&callback=initMap"
+        async defer></script>
   <script src="assets/components/foundation-sites/dist/js/foundation.min.js"></script>
   <script src="assets/components/what-input/dist/what-input.min.js"></script>
   <script src="assets/dist/global.js"></script>

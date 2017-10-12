@@ -18,12 +18,16 @@
     justify-content: flex-end;
     @include breakpoint(xs){
       @include flex-grid-column(12);
+      padding-bottom: 0;
+      padding-top: rem-calc(30);
     }
   }
   &__logo {
     @include flex-grid-column(3);
+    height: rem-calc(95);
     @include breakpoint(xs){
       @include flex-grid-column(12);
+      height: rem-calc(110);
     }
   }
   &__inform{
@@ -34,6 +38,9 @@
     text-align: center;
     font-size: rem-calc(72);
     font-weight: 700;
+    @include breakpoint(xs){
+      font-size: rem-calc(50);
+    }
   }
   &__sub-title{
     text-align: center;
@@ -42,14 +49,133 @@
   }
 }
 
+//SVG
+svg{
+  height: 100%;
+  width: 100%;
+}
+
+#contour{
+  stroke: $white-color;
+  stroke-dasharray: 2485;
+  stroke-dashoffset: 2485;
+  animation: contour 4s linear forwards;
+}
+
+@keyframes contour {
+  from{
+    stroke-dashoffset: 2485;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#bouche{
+  stroke: $white-color;
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  animation: bouche 3s linear forwards;
+}
+
+@keyframes bouche {
+  from{
+    stroke-dashoffset: 210;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#dent{
+  stroke: $white-color;
+  stroke-dasharray: 46;
+  stroke-dashoffset: 46;
+  animation: dent 3s linear forwards;
+}
+
+@keyframes dent {
+  from{
+    stroke-dashoffset: 46;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#oeil{
+  stroke: $white-color;
+  stroke-dasharray: 52;
+  stroke-dashoffset: 52;
+  animation: oeil 2s linear forwards;
+}
+
+@keyframes oeil {
+  from{
+    stroke-dashoffset: 52;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#machoire{
+  stroke: $white-color;
+  stroke-dasharray: 528;
+  stroke-dashoffset: 528;
+  animation: machoire 3s linear forwards;
+}
+
+@keyframes machoire {
+  from{
+    stroke-dashoffset: 528;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#nez{
+  stroke: $white-color;
+  opacity: 0;
+  animation: nez 1s linear forwards;
+  animation-delay: 3s;
+}
+
+@keyframes nez {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+//MENU
+
 .menu {
   display: flex;
   flex-flow: row wrap;
   align-self: center;
   padding-left: 0;
   list-style: none;
+  @include breakpoint(xs){
+    display: flex;
+    @include flex-grid-column(9);
+  }
+  &--show{
+    @include breakpoint(xs){
+      display: none;
+    }
+  }
   &__item {
     padding-left: rem-calc(28);
+    @include breakpoint(xs){
+      padding-left: rem-calc(15);
+    }
   }
   &__link {
     color: $white-color;
@@ -61,5 +187,53 @@
   }
   &__link:hover{
     color: $hover_color;
+  }
+}
+
+.menu-icon {
+  position: relative;
+  height: 15px;
+  width: rem-calc(31);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: none;
+  @include breakpoint(xs){
+    display: block;
+  }
+  &__line {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 31px;
+    height: 2px;
+    background-color: $white-color;
+    border-radius: 3px;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $white-color;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+    &:before {
+      transform: translateY(-5px);
+    }
+    &:after {
+      transform: translateY(5px);
+    }
+  }
+  &--open {
+    @include breakpoint(xs){
+      transform: rotate(45deg);
+    }
+    span {
+      &:before,
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
   }
 }

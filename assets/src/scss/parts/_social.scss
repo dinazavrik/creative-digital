@@ -8,9 +8,6 @@
   margin-bottom: 0;
   list-style: none;
   background-color: #9f9acf;
-  @include breakpoint(xs){
-    flex-wrap: nowrap;
-  }
   &__item{
     margin-right: rem-calc(13);
     width: rem-calc(32);
@@ -20,6 +17,12 @@
     text-align: center;
     transition: all .3s ease;
     background-color: $white-color;
+    @include breakpoint(xs){
+      margin-right: rem-calc(5);
+      width: rem-calc(20);
+      height: rem-calc(20);
+      border-radius: 10px;
+    }
   }
   &__link{
     line-height: rem-calc(13);

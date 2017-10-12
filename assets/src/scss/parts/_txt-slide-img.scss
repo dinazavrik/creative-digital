@@ -21,6 +21,9 @@
   &__slider{
     @include flex-grid-column(8);
     text-align: center;
+    @include breakpoint(xs){
+      @include flex-grid-column(10);
+    }
   }
   &__slider-content{
     width: 230px;
