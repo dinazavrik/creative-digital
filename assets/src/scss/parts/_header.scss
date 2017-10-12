@@ -59,7 +59,7 @@ svg{
   stroke: $white-color;
   stroke-dasharray: 2485;
   stroke-dashoffset: 2485;
-  animation: contour 4s linear forwards;
+  animation: contour 7s linear forwards;
 }
 
 @keyframes contour {
@@ -75,7 +75,7 @@ svg{
   stroke: $white-color;
   stroke-dasharray: 210;
   stroke-dashoffset: 210;
-  animation: bouche 3s linear forwards;
+  animation: bouche 6s linear forwards;
 }
 
 @keyframes bouche {
@@ -91,7 +91,7 @@ svg{
   stroke: $white-color;
   stroke-dasharray: 46;
   stroke-dashoffset: 46;
-  animation: dent 3s linear forwards;
+  animation: dent 6s linear forwards;
 }
 
 @keyframes dent {
@@ -107,7 +107,7 @@ svg{
   stroke: $white-color;
   stroke-dasharray: 52;
   stroke-dashoffset: 52;
-  animation: oeil 2s linear forwards;
+  animation: oeil 5s linear forwards;
 }
 
 @keyframes oeil {
@@ -123,7 +123,7 @@ svg{
   stroke: $white-color;
   stroke-dasharray: 528;
   stroke-dashoffset: 528;
-  animation: machoire 3s linear forwards;
+  animation: machoire 6s linear forwards;
 }
 
 @keyframes machoire {
@@ -139,7 +139,7 @@ svg{
   stroke: $white-color;
   opacity: 0;
   animation: nez 1s linear forwards;
-  animation-delay: 3s;
+  animation-delay: 1s;
 }
 
 @keyframes nez {
