@@ -1,6 +1,9 @@
 .img-text{
   padding-top: rem-calc(124);
   background-color: $bg_color_1;
+  @include breakpoint(xs){
+    padding-top: rem-calc(24);
+  }
   &__row{
     @include flex-grid-column(12, 15);
     @include flex-grid-row;
@@ -27,7 +30,7 @@
     padding-top: rem-calc(76);
     @include breakpoint(xs){
       @include flex-grid-column(12);
-      padding-left: rem-calc(40);
+      padding-left: rem-calc(20);
     }
   }
   &__text-t{
