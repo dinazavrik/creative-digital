@@ -45,15 +45,21 @@
   }
   &__title{
     color: $black-color;
-    font-size: 24px;
+    font-size: rem-calc(24);
     font-weight: 700;
+    @include breakpoint(xs){
+      font-size: rem-calc(16);
+    }
     &--bot{
       margin-bottom: rem-calc(118);
     }
   }
   &__sub-title{
     color: $black-color;
-    font-size: 18px;
+    font-size: rem-calc(18);
+    @include breakpoint(xs){
+      font-size: rem-calc(14);
+    }
   }
   &__image{
     margin-bottom: rem-calc(30);
